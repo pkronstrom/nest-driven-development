@@ -4,7 +4,9 @@
 
 **The minimum vibable workflow.**
 
-Let the flock handle it. **owl** guards permissions from your hammock. **hawk** rewires hooks mid-flight. **dodo** refuses to let tasks go extinct. **goose** orchestrates multi-agent pipelines. **rook** enforces guardrails so agents stay disciplined. That's Nest-Driven Development — five CLI tools for vibe coding.
+You're running three Claude Code instances, approving tool calls one by one, losing track of tasks across repos, and hoping the agent doesn't silently go off the rails. Sound familiar?
+
+Let the flock handle it. **owl** guards permissions from your hammock. **hawk** rewires hooks mid-flight. **dodo** refuses to let tasks go extinct. **goose** orchestrates multi-agent pipelines. **rook** enforces guardrails so agents stay disciplined. That's Nest-Driven Development — five CLI tools for agentic coding.
 
 ---
 
@@ -34,7 +36,7 @@ Smart task tracking for you and your AI agents.
 - **Graph plugin**: Dependency tracking for multi-agent coordination
 - **Flexible backends**: SQLite, Markdown, Obsidian
 
-### [goose](https://github.com/pkronstrom/goose) — Pipeline-Driven Multi-Agent Toolkit
+### [goose](https://github.com/pkronstrom/goose-scripts) — Pipeline-Driven Multi-Agent Toolkit
 
 Compose LLM-powered workflows from reusable nodes.
 
@@ -52,28 +54,22 @@ Keep agents disciplined across long sessions.
 
 ---
 
-## Why NDD?
-
-**dodo** — Simple task tracking that scales. No complex tools for simple ideas. Smart repo detection routes todos to the right project automatically. Graph-based dependency tracking for multi-agent coordination. Clean core with AI formatting, Obsidian sync, and more via plugins.
-
-**owl** — AFK permissions and notifications for multiple parallel Claude Code instances via Telegram. Handles concurrent requests and feels snappy. Smart pattern rules auto-approve trusted commands. Recognizes command chains, SSH wrappers, and sudo.
-
-**hawk** — Fast on-the-fly hook toggling without restarting Claude. Quick-add and edit hooks in any language. Syncs prompt and agent files to Claude, Codex, Gemini, and more. Auto-discovery means drop a script in and it just works.
-
-**goose** — Pipeline-driven multi-agent workflows. Define research, debate, code review, and security audit pipelines as composable JSON graphs. 15+ bundled pipelines work out of the box. Multi-provider support auto-detects Claude, Codex, Gemini, and Perplexity.
-
-**rook** — Guardrails that close the feedback loop. Evaluates every tool call against configurable rules — warns on scope creep, blocks dangerous commands, enforces architecture plans, and auto-formats code. Fail-open design means it never breaks your session.
-
----
-
 ## Get Started
 
 ```bash
 uv tool install git+https://github.com/pkronstrom/owl-afk      # The wise one
 uv tool install git+https://github.com/pkronstrom/hawk-hooks   # The sharp one
 uv tool install git+https://github.com/pkronstrom/dodo-tasks   # The stubborn one
-uv tool install git+https://github.com/pkronstrom/goose        # The orchestrator
+uv tool install git+https://github.com/pkronstrom/goose-scripts # The orchestrator
 uv tool install git+https://github.com/pkronstrom/rook-rules   # The disciplined one
+```
+
+Then try it out:
+
+```bash
+dodo add "ship the new feature"   # Track a task
+owl status                        # See your approval queue
+hawk list                         # Check active hooks
 ```
 
 Or install the whole flock at once:
@@ -82,9 +78,15 @@ Or install the whole flock at once:
 uv tool install git+https://github.com/pkronstrom/owl-afk \
   && uv tool install git+https://github.com/pkronstrom/hawk-hooks \
   && uv tool install git+https://github.com/pkronstrom/dodo-tasks \
-  && uv tool install git+https://github.com/pkronstrom/goose \
+  && uv tool install git+https://github.com/pkronstrom/goose-scripts \
   && uv tool install git+https://github.com/pkronstrom/rook-rules
 ```
+
+---
+
+## License
+
+MIT
 
 ---
 
